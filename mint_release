@@ -1,0 +1,17 @@
+#!/bin/bash
+# Mirror Linux Mint release directory
+
+
+RSYNCSOURCE=rsync://ftp.heanet.ie/pub/linuxmint.com/
+BASEDIR=/media/mirror/linuxmint/release/
+
+fatal() {
+  echo "$1"
+  exit 1
+}
+
+if [ ! -d ${BASEDIR} ]; then
+  fatal "${BASEDIR} does not exist ! Is the LXC mount ok ?"
+fi
+
+rsync -a  --delete -P "$RSYNCSOURCE"  "$BASEDIR" || fatal "Sync failed."
