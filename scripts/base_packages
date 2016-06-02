@@ -1,8 +1,8 @@
 #!/bin/bash
-# Mirror Linux Mint package archive. Adapted from https://wiki.ubuntu.com/Mirrors/Scripts
+# Mirror some packages. Adapted from https://wiki.ubuntu.com/Mirrors/Scripts
 
-RSYNCSOURCE=rsync://rsync-packages.linuxmint.com/packages/
-BASEDIR=/media/mirror/linuxmint/packages/
+RSYNCSOURCE="$1"
+BASEDIR="$2"
 
 fatal() {
   echo "$1"

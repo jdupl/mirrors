@@ -1,0 +1,7 @@
+#!/bin/bash
+# Mirror Linux Mint packages
+
+RSYNCSOURCE=rsync://rsync-packages.linuxmint.com/packages/
+BASEDIR=/media/mirror/linuxmint/packages/
+
+./base_packages "${RSYNCSOURCE}" "${BASEDIR}" || exit 1

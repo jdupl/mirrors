@@ -1,0 +1,7 @@
+#!/bin/bash
+# Mirror Linux Mint releases directory
+
+RSYNCSOURCE=rsync://ftp.heanet.ie/pub/linuxmint.com/
+BASEDIR=/media/mirror/linuxmint/releases/
+
+./base_releases "${RSYNCSOURCE}" "${BASEDIR}" || exit 1

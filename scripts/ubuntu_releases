@@ -1,0 +1,10 @@
+#!/bin/bash
+# Mirror Ubuntu releases directory
+
+RSYNCSOURCE=rsync://ca.rsync.releases.ubuntu.com/releases
+BASEDIR=/media/mirror/ubuntu/releases/
+
+./base_releases "${RSYNCSOURCE}" "${BASEDIR}" || exit 1
+
+host=$(/bin/hostname -f)
+date -u > "${BASEDIR}/project/trace/${host}" || exit 2

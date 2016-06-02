@@ -1,0 +1,10 @@
+#!/bin/bash
+# Mirror Ubuntu packages. Adapted from https://wiki.ubuntu.com/Mirrors/Scripts
+
+RSYNCSOURCE=rsync://ubuntu.bhs.mirrors.ovh.net/ubuntu/ubuntu/
+BASEDIR=/media/mirror/ubuntu/packages/
+
+./base_packages "${RSYNCSOURCE}" "${BASEDIR}" || exit 1
+
+host=$(/bin/hostname -f)
+date -u > "${BASEDIR}/project/trace/${host}" || exit 2
