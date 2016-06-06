@@ -1,5 +1,5 @@
 # Debian packages
-17 */6 * * * ftpsync sync:all
+17 */6 * * * ~/bin/ftpsync sync:all
 
 # Linux Mint
 20 */12 * * * cd mirrors/scripts/ && ./mint_releases
