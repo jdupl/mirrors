@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Mirror Linux Mint releases directory
 
 RSYNCSOURCE=rsync://ftp.heanet.ie/pub/linuxmint.com/

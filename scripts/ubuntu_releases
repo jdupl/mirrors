@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 # Mirror Ubuntu releases directory
 
 RSYNCSOURCE=rsync://ca.rsync.releases.ubuntu.com/releases
