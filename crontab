@@ -8,3 +8,6 @@
 # Ubuntu
 51 */4 * * * cd mirrors/scripts/ && ./ubuntu_packages
 51 3 * * * cd mirrors/scripts/ && ./ubuntu_releases
+
+# Arch
+36 */6 * * * cd mirrors/scripts/ && ./arch
