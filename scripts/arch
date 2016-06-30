@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # Mirror Archlinux
 
-RSYNCSOURCE=rsync://mirror.frgl.pw/archlinux/
+RSYNCSOURCE=rsync://arch.mirrors.ionfish.org/archlinux/
 BASEDIR=/media/mirror/archlinux/
 
 fatal() {
