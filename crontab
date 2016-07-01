@@ -10,4 +10,4 @@
 51 3 * * * cd mirrors/scripts/ && ./ubuntu_releases
 
 # Arch
-36 */6 * * * cd mirrors/scripts/ && ./arch
+36 */2 * * * cd mirrors/scripts/ && ./arch
